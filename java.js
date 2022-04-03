@@ -5,4 +5,4 @@ img = document.querySelector("img"); // valitaan img element
 randomImage = "kuvat/auto" + randomNum + ".png"; // luodaan polku kuvalle randomNumeron mukaan
 img.setAttribute("src", randomImage); // Asetetaan kuva näytölle
 
-//////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
