@@ -1,6 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #393e46;
-  box-sizing: border-box;
 }
 
 .container {
@@ -9,9 +14,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+.scores {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100%;
+}
 
 h1 {
-  margin: 30px;
+  margin-top: 30px;
+
   font-family: "Lobster", cursive;
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
@@ -25,7 +36,8 @@ p {
 }
 
 img {
-  width: 80%;
+  margin-top: 0px;
+  width: 100%;
 }
 
 .merkki {
@@ -41,10 +53,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.scores {
-  width: 50%;
-  margin-left: 200px;
 }
 
 @media screen and (max-width: 450px) {
@@ -62,10 +70,11 @@ img {
   }
   h1 {
     margin: 0;
+    font-size: 30px;
   }
   img {
     width: 50%;
-    border: 1px soli;
+    margin-top: 20px;
   }
 
   .merkki {
@@ -74,6 +83,6 @@ img {
   }
 
   .scores {
-    margin: 0;
+    margin-bottom: 30px;
   }
 }

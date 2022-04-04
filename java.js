@@ -6,11 +6,11 @@ img = document.querySelector("img"); // valitaan img element
 randomImage = "kuvat/auto" + randomNum + ".png"; // luodaan polku kuvalle randomNumeron mukaan
 img.setAttribute("src", randomImage); // Asetetaan kuva näytölle
 
-oikeinArvattu = 0;
-arvattuOikein = document.querySelector(".correct-answers");
+oikeinArvattu = 0; // laskin joka laskee oikein arvatut merkit
+arvattuOikein = document.querySelector(".correct-answers"); // Valitsee correct answer classin
 
 highScoreSpan = document.querySelector(".highScore-value"); // Valitaan highscore
-highScore = 0;
+highScore = 0; // Highscore laskin
 
 //////////////////////////////////////////////////////////
 
