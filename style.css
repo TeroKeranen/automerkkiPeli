@@ -55,7 +55,7 @@ img {
   justify-content: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   body {
     overflow: hidden;
   }
@@ -75,6 +75,8 @@ img {
   img {
     width: 50%;
     margin-top: 20px;
+  }
+  .h1-arvaa {
   }
 
   .merkki {
