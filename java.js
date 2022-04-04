@@ -6,17 +6,49 @@ randomImage = "kuvat/auto" + randomNum + ".png"; // luodaan polku kuvalle random
 img.setAttribute("src", randomImage); // Asetetaan kuva näytölle
 
 oikeinArvattu = 0;
-ArvattuOikein = document.querySelector(".correct-answers");
+arvattuOikein = document.querySelector(".correct-answers");
 
 highScoreSpan = document.querySelector(".highScore-value"); // Valitaan highscore
 highScore = 0;
 
 //////////////////////////////////////////////////////////
 
+//////////// functio joka asettaa highscore esille//////////
+function setHighScore() {
+  highScore = oikeinArvattu;
+  highScoreSpan.textContent = highScore;
+}
+//////////////////////////////////////////////////
+
+///////CorrectAnswer functio pisteen laskuun /////////////
 function correctAnswers() {
   oikeinArvattu++;
-  ArvattuOikein.textContent = oikeinArvattu;
+  arvattuOikein.textContent = oikeinArvattu;
 }
+/////////////////////////////////////////////////////////
+
+////////////////////////Function joka nollaa pelin väärin vastattaessa//////////////////
+function setTimer() {
+  sekunnit = 5;
+  let intervalSet = setInterval(gameOverTimer, 1000);
+
+  function gameOverTimer() {
+    oikeinArvattu = 0;
+    document.querySelector(
+      "h1"
+    ).textContent = `Hävisit pelin. Peli alkaa alusta ${sekunnit} sekunnin kuluttua...`;
+    sekunnit--;
+    document.querySelector("h1").style.fontSize = "40px";
+
+    if (sekunnit < 0) {
+      document.querySelector("h1").textContent = "Arvaa automerkki";
+      document.querySelector(".arvaus").value = "";
+      document.querySelector(".correct-answers").textContent = oikeinArvattu;
+      clearInterval(intervalSet);
+    }
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////Luodaan testi function joka toimii onclickin kauttta //////////////////////////////////
 function testi() {
@@ -37,10 +69,10 @@ function testi() {
       random();
 
       if (oikeinArvattu > highScore) {
-        highScore = oikeinArvattu;
+        setHighScore();
       }
     } else if (arrayNum !== randomNum) {
-      console.log("eiii");
+      setTimer();
     }
   }
   ///// arvaus function loppuu ////
