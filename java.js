@@ -1,6 +1,7 @@
 /////////// Random kuva sivulle /////////////////////
 
-randomNum = Math.trunc(Math.random() * +6); // Luodaan random numero
+randomNum = Math.trunc(Math.random() * +15); // Luodaan random numero
+console.log(randomNum);
 img = document.querySelector("img"); // valitaan img element
 randomImage = "kuvat/auto" + randomNum + ".png"; // luodaan polku kuvalle randomNumeron mukaan
 img.setAttribute("src", randomImage); // Asetetaan kuva näytölle
@@ -56,7 +57,7 @@ function testi() {
   function arvaus() {
     ////// Random functio alkaa /////// functio random. Toimii vain silloin kun function arvaus on true.
     function random() {
-      randomNum = Math.trunc(Math.random() * +6); //function randomin sisälle luodaan uusi random numero.
+      randomNum = Math.trunc(Math.random() * +15); //function randomin sisälle luodaan uusi random numero.
       img = document.querySelector("img"); // valitaan taas img elemenet
       randomImage = "kuvat/auto" + randomNum + ".png"; // Tehdään taas kuvan polku
       img.setAttribute("src", randomImage); // Asetetaan uusi kuva
@@ -85,6 +86,15 @@ function testi() {
     toyota: 3,
     honda: 4,
     nissan: 5,
+    ford: 6,
+    porsche: 7,
+    lamborghini: 8,
+    bentley: 9,
+    maserati: 10,
+    audi: 11,
+    subaru: 12,
+    cadillac: 13,
+    chrysler: 14,
   };
 
   let arvaa = document.querySelector(".arvaus").value; // Otetaan arvaus class value talteen
