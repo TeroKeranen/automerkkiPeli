@@ -43,6 +43,7 @@ function setTimer() {
 
     if (sekunnit < 0) {
       document.querySelector("h1").textContent = "Arvaa automerkki";
+      document.querySelector("h1").style.fontSize = "30px";
       document.querySelector(".arvaus").value = "";
       document.querySelector(".correct-answers").textContent = oikeinArvattu;
       clearInterval(intervalSet);
