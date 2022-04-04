@@ -100,6 +100,8 @@ function testi() {
   };
 
   let arvaa = document.querySelector(".arvaus").value; // Otetaan arvaus class value talteen
+  let muunnaArvaus = arvaa.toLowerCase();
+  arvaa = muunnaArvaus;
   let arrayNum = autot[arvaa]; // katsoo vastauksen array numeron
   let objectKey = Object.keys(autot)[arrayNum]; // kertoo array2 numeron vastauksen --- Ei tässä tapauksessa tarpeellinen mutta harjoituksen kannalta oli hyvä tajuta tämä toiminto.
   arvaus(); // Arvaus functio joka sisältää random function
