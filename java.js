@@ -62,6 +62,7 @@ function testi() {
       randomImage = "kuvat/auto" + randomNum + ".png"; // Tehdään taas kuvan polku
       img.setAttribute("src", randomImage); // Asetetaan uusi kuva
       correctAnswers.textContent = oikeinArvattu;
+      document.querySelector(".arvaus").value = "";
     }
     ////// Random functio loppuu ///////
 
@@ -70,9 +71,9 @@ function testi() {
       random();
 
       if (oikeinArvattu > highScore) {
-        setHighScore();
       }
     } else if (arrayNum !== randomNum) {
+      setHighScore();
       setTimer();
     }
   }
