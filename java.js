@@ -46,7 +46,12 @@ function setTimer() {
       document.querySelector("h1").style.fontSize = "30px";
       document.querySelector(".arvaus").value = "";
       document.querySelector(".correct-answers").textContent = oikeinArvattu;
+      randomNum = Math.trunc(Math.random() * +15); //function randomin sisälle luodaan uusi random numero.
+      img = document.querySelector("img"); // valitaan taas img elemenet
+      randomImage = "kuvat/auto" + randomNum + ".png"; // Tehdään taas kuvan polku
+      img.setAttribute("src", randomImage); // Asetetaan uusi kuva
       clearInterval(intervalSet);
+      
     }
   }
 }
